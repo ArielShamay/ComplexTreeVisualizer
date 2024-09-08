@@ -1,5 +1,7 @@
-// ID: 207492315
-// Email: Tzohary1234@gmail.com
+// Name - Ariel Shamay
+// CPP_EX_4
+// Mail - Arielsh49@gmail.com
+
 #include <iostream>
 #include <string>
 #include "Node.hpp"

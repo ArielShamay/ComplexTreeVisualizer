@@ -1,3 +1,6 @@
+// Name - Ariel Shamay
+// CPP_EX_4
+// Mail - Arielsh49@gmail.com
 
 #ifndef TREE_HPP
 #define TREE_HPP
