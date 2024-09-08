@@ -119,7 +119,7 @@ int main()
     cout << "End of heap order" << endl;
     std::cout <<std::endl;
 
-//    tree.visualize();
+   tree.visualize();
 
 
 

@@ -639,30 +639,61 @@ public:
     */
 
 
-    void visualize() {
-        sf::RenderWindow window(sf::VideoMode(1200, 800), "Tree Visualization");
-        sf::Font font;
+    // void visualize() {
+    //     sf::RenderWindow window(sf::VideoMode(1200, 800), "Tree Visualization");
+    //     sf::Font font;
 
-        // Load the font from a file
-        if (!font.loadFromFile("Arimo-Italic-VariableFont_wght.ttf")) {
-            std::cerr << "Error loading font" << std::endl;
-            return;
-        }
+    //     // Load the font from a file
+    //     if (!font.loadFromFile("Arimo-Italic-VariableFont_wght.ttf")) {
+    //         std::cerr << "Err or loading font" << std::endl;
+    //         return;
+    //     }
 
-        while (window.isOpen()) {
-            sf::Event event;
-            while (window.pollEvent(event)) {
-                if (event.type == sf::Event::Closed){
-                    window.close();
-                }
-            }
+    //     while (window.isOpen()) {
+    //         sf::Event event;
+    //         while (window.pollEvent(event)) {
+    //             if (event.type == sf::Event::Closed){
+    //                 window.close();
+    //             }
+    //         }
 
-            window.clear(sf::Color::White);
-            int maxDepth = calculateMaxDepth(root_);
-            drawTree(window, root_, font, window.getSize().x / 2, 20, window.getSize().x / 4, 0, maxDepth);
-            window.display();
-        }
+    //         window.clear(sf::Color::White);
+    //         int maxDepth = calculateMaxDepth(root_);
+    //         drawTree(window, root_, font, window.getSize().x / 2, 20, window.getSize().x / 4, 0, maxDepth);
+    //         window.display();
+    //     }
+    // }
+
+void visualize() {
+    std::cout << "Starting visualize function" << std::endl;
+    sf::RenderWindow window(sf::VideoMode(1200, 800), "Tree Visualization");
+    std::cout << "Window created" << std::endl;
+    sf::Font font;
+
+    // Load the font from a file
+    if (!font.loadFromFile("Arimo-Italic-VariableFont_wght.ttf")) {
+        std::cerr << "Error loading font" << std::endl;
+        return;
     }
+    std::cout << "Font loaded successfully" << std::endl;
+
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed){
+                window.close();
+            }
+        }
+
+        window.clear(sf::Color::White);
+        int maxDepth = calculateMaxDepth(root_);
+        std::cout << "Drawing tree" << std::endl;
+        drawTree(window, root_, font, window.getSize().x / 2, 20, window.getSize().x / 4, 0, maxDepth);
+        window.display();
+    }
+    std::cout << "Finished visualize function" << std::endl;
+}
+
 
 
 };

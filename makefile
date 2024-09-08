@@ -1,6 +1,6 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -g -I/usr/include/SFML
-LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system
+CXXFLAGS = -std=c++17 -Wall -g -IC:/msys64/mingw64/SFML/include
+LDFLAGS = -LC:/msys64/mingw64/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system
 
 TEST = test
 DEMO = demo

@@ -1,24 +1,20 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "x64",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:/msys64/mingw64/include",
+                "C:/msys64/mingw64/SFML/include"
             ],
             "defines": [],
             "cStandard": "c17",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "linux-clang-x64"
-        },
-        {
-            "name": "Ariel",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "cStandard": "c17",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "linux-clang-x64"
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe", 
+            "compilerArgs": [
+                "-LC:/msys64/mingw64/SFML/lib" 
+            ]         
         }
     ],
     "version": 4
